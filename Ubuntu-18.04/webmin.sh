@@ -38,6 +38,7 @@ apt-get -y upgrade
 function install_webmin(){
 
   # Universe is required for php-fpm
+  apt-get -y install software-properties-common
   apt-add-repository universe
 
   echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list.d/webmin.list
