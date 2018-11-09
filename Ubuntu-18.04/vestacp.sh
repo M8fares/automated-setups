@@ -39,6 +39,7 @@ VESTA_PASS=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32) || true
 
 # Install Vesta Control Panel
 function install_vestacp(){
+  apt-get -y install software-properties-common
   apt-add-repository universe
 
   curl -O http://vestacp.com/pub/vst-install.sh
