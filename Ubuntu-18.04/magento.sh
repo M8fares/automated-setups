@@ -40,6 +40,7 @@ MYSQL_PASS=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32) || true
 # LEMP Stack
 function lemp(){
   # Add 'Universe' repository for php-fpm
+  apt-get -y install software-properties-common
   apt-add-repository universe
 
   # Set previously generated password for 'root'@'localhost'
