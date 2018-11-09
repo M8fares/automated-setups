@@ -147,8 +147,8 @@ GRANT ALL PRIVILEGES ON ${WP_DB}.* TO '${WP_USER}'@'localhost' IDENTIFIED BY '${
 FLUSH PRIVILEGES;
 CMD_EOF
 
-  # Install required PHP extentions
-  apt-get install -y php-gd
+  # Install required PHP extentions and cURL
+  apt-get install -y php-gd curl
 
   curl -L http://wordpress.org/latest.tar.gz >/tmp/wp.tar.gz
   pushd /var/www/
